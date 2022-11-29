@@ -1,13 +1,18 @@
 <ion-item *ngIf="message" [routerLink]="'/message/' + message.id" [detail]="false">
-  <div slot="start" [class]="!message.read ? 'dot dot-unread' : 'dot'"></div>
+ <!--  <div slot="start" [class]="!message.read ? 'dot dot-unread' : 'dot'"></div> -->
   <ion-label class="ion-text-wrap">
     <h2>
-      {{ message.fromName }}
-      <span class="date">
-        <ion-note>{{ message.date }}</ion-note> 
-        <ion-icon name="chevron-forward" size="small" *ngIf="isIos()"></ion-icon>
-      </span>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" color="primary"/>
+        </ion-avatar>
+        <ion-label>{{ message.fromName }}</ion-label>
+      </ion-item>
+      <!-- <span class="date"> -->
+       <!--  <ion-note>{{ message.date }}</ion-note> --> 
+      <!--   <ion-icon name="chevron-forward" size="small" *ngIf="isIos()"></ion-icon> -->
+      <!-- </span> -->
     </h2>
-    <h3>{{ message.subject }}</h3>
+    <!-- <h3>{{ message.subject }}</h3> -->
   </ion-label>
   </ion-item>

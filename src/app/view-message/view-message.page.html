@@ -13,15 +13,58 @@
       <h2>
         {{ message.fromName }}
         <span class="date">
-          <ion-note>{{ message.date }}</ion-note>
+          <!-- <ion-note>{{ message.date }}</ion-note> -->
         </span>
       </h2>
-      <h3>To: <ion-note>Me</ion-note></h3>
-    </ion-label>
+      <!-- <h3>To: <ion-note>Me</ion-note></h3> -->
+    </ion-label> 
   </ion-item>
-  
+  <ion-accordion-group expand="inset">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Factura: Mayo 29 2019</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <ion-col>Producto</ion-col>
+            <ion-col>Cantidad</ion-col>
+            <ion-col>Precio</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Factura: Julio 30 2019</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <ion-col>Producto</ion-col>
+            <ion-col>Cantidad</ion-col>
+            <ion-col>Precio</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Factura: Septiembre 19 2019</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <ion-col>Producto</ion-col>
+            <ion-col>Cantidad</ion-col>
+            <ion-col>Precio</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
   <div class="ion-padding">
-    <h1>{{ message.subject }}</h1>
-
+<!--     <h1>{{ message.subject }}</h1> -->
   </div>
 </ion-content>
+
